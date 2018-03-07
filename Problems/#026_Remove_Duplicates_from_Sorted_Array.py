@@ -7,14 +7,11 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
-        if not nums:
-            return 0
-        index = 0
-        for i in range(1, len(nums)):
-            if nums[i] != nums[index]:
-                index += 1
-                nums[index] = nums[i]
-        return index + 1
+        setted = list(set(nums))
+        setted.sort()
+        for i in range(len(setted)):
+            nums[i] = setted[i]
+        return len(setted)
 
 
 if __name__ == "__main__":
