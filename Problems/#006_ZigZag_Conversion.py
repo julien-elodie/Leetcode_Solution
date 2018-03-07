@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class Solution:
     def convert(self, s, numRows):
         """
