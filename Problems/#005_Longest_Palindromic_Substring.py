@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class Solution:
     def longestPalindrome(self, s):
         """
@@ -17,7 +18,7 @@ class Solution:
             if i + P[i] > R:
                 C, R = i, i + P[i]
         maxLen, center = max(P), P.index(max(P))
-        return s[(center - maxLen) // 2 : (center + maxLen) // 2]
+        return s[(center - maxLen) // 2:(center + maxLen) // 2]
 
 
 if __name__ == "__main__":

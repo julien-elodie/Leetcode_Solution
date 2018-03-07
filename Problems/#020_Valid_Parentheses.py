@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
 
+
 class Solution:
     def isValid(self, s):
         """
         :type s: str
         :rtype: bool
         """
-        bracket_map = {
-            "(": ")",
-            "[": "]",
-            "{": "}"
-        }
+        bracket_map = {"(": ")", "[": "]", "{": "}"}
         bracket = ""
         brackets = []
         for i in s:

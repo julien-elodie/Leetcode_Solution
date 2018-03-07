@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class Solution:
     def lengthOfLongestSubstring(self, s):
         """
@@ -15,6 +16,7 @@ class Solution:
             dic[s[i]] = i
             maxLen = max(maxLen, i - start)
         return maxLen
+
 
 if __name__ == "__main__":
     s = Solution()

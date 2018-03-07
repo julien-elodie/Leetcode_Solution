@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class Solution:
     def generateParenthesis(self, n):
         """
@@ -14,7 +15,7 @@ class Solution:
             return list(ret)
         else:
             for i in self.generateParenthesis(n - 1):
-                    ret.add("(" + i + ")")
+                ret.add("(" + i + ")")
             for N in range(1, n):
                 for i in self.generateParenthesis(n - N):
                     for j in self.generateParenthesis(N):
@@ -22,7 +23,7 @@ class Solution:
                         ret.add(j + i)
             l = list(ret)
             l.sort()
-            return l 
+            return l
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 class Solution:
     def intToRoman(self, num):
         """
@@ -11,7 +12,8 @@ class Solution:
         X = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
         I = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
         num = "%04d" % num
-        return M[int(num[-4])] + C[int(num[-3])] + X[int(num[-2])] + I[int(num[-1])]
+        return M[int(num[-4])] + C[int(num[-3])] + X[int(num[-2])] + I[int(
+            num[-1])]
 
 
 if __name__ == "__main__":
