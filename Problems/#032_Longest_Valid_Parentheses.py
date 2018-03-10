@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 class Solution:
     def longestValidParentheses(self, s):
         """
@@ -15,7 +12,7 @@ class Solution:
             top = stack[-1]
             if top != -1 and s[i] == ')' and s[top] == '(':
                 stack.pop()
-                max_length = max(max_length, i-stack[-1])
+                max_length = max(max_length, i - stack[-1])
             else:
                 stack.append(i)
         return max_length

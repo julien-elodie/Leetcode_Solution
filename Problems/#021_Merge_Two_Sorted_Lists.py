@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, x):

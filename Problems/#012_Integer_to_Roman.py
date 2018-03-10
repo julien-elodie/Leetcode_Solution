@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 class Solution:
     def intToRoman(self, num):
         """

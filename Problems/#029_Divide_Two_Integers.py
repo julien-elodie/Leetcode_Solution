@@ -1,6 +1,3 @@
-#!/usr/bin/env python3
-
-
 class Solution:
     def divide(self, dividend, divisor):
         """
