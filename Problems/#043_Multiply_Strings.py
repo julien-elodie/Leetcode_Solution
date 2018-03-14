@@ -1,7 +1,7 @@
 """[summary]
 
 Bugs:
-    计算精度问题
+    speed up program
 """
 import math
 import cmath
@@ -83,10 +83,17 @@ class Solution:
         # Conjugate
         ifft = [i.conjugate() for i in ifft]
         # Postprocess
-        ret = 0
-        for digit in range(len(ifft)):
-            ret += ifft[digit].real * 10**(-1 * digit)
-        return str(int(ret * 10**(len(num1) + len(num2) - 2)))
+        length = len(num1) + len(num2) - 1
+        ifft = [int(round(i.real)) for i in ifft][:length]
+        provider, remainer = 0, 0
+        ret = []
+        for i in ifft[::-1] + [0]:
+            provider, remainer = divmod(i + provider, 10)
+            ret.append(str(remainer))
+        # clear zero
+        while ret[-1] == '0' and len(ret) > 1:
+            ret.pop()
+        return ''.join(ret[::-1])
 
     def modifySerial(self, serial):
         serial = [int(i) for i in serial]
@@ -97,5 +104,5 @@ class Solution:
 
 if __name__ == "__main__":
     s = Solution()
-    output = s.multiply("0", "0")
+    output = s.multiply('0','0')
     print(output)
