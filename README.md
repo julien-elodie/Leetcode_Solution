@@ -12,7 +12,7 @@ solutions for leetcode
     + Bundles #No(回顾汇总)
         + #No._Problem_Name(题目)
             + Solution.py(解法实现)
-            + Preview.md(解题思路，解法说明，Bugs)
+            + Preview.md(问题陈述，解题思路，解法说明，Bugs)
             + Reference(参考资料)
                 +   ...
         +   ...
